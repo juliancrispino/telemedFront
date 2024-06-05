@@ -28,7 +28,7 @@
     <tr *ngFor="let med of arduinoData?.data">
       <td class="dato">{{med.serie}}</td>
       <td class="dato">{{med.modelo}}</td>
-      <td class="dato">{{med.fecha}}</td>
+      <td class="dato">{{formatFecha(med.fecha)}}</td>
       <td class="dato">{{med.tension}}</td>
       <td class="dato">{{med.corriente}}</td>
       <td class="dato">{{med.potenciaActiva}}</td>

@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
   getDatosChart(){
     console.log("this.arduinoData.data.length: ", this.arduinoData?.data?.length)
     for (let i = 0; i < this.arduinoData?.data?.length; i++) {
-      this.labels.push(this.arduinoData?.data[i].fecha);
+      this.labels.push(this.formatFecha(this.arduinoData?.data[i].fecha));
       let frec = this.extractNumber(this.arduinoData?.data[i].frecuencia)
       this.dataset.push(frec);
     }
@@ -66,4 +66,15 @@ export class AppComponent implements OnInit {
     console.log("result: ", result ? parseFloat(result[0]): "--")
     return result ? parseFloat(result[0]) : NaN;
    }
+
+   formatFecha(fecha: String){
+    const dia = fecha.substring(8,10);
+    const mes = fecha.substring(5,7);
+    const anio = fecha.substring(0,4);
+    const hora = fecha.substring(11,19);
+    const fechaFormateada = dia+"/"+mes+"/"+anio+" - "+hora
+
+    return fechaFormateada;
+   }
+
 }

@@ -1,0 +1,29 @@
+.titulo{
+  background-color: #555555;
+  color: white;
+  text-align: center;
+  width: 12em;
+  border-right: 1px solid;
+ }
+
+.dato{
+  text-align: right;
+  padding-right:.5em;
+  border: 1px solid;
+}
+
+.tablaValores{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid;
+}
+
+.chart{
+  margin: 5rem auto;
+  width: 50%
+}
